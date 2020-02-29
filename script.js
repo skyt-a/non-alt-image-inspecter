@@ -1,3 +1,6 @@
-document.querySelectorAll('img').forEach((img) => {
-    img.style.filter = 'blur(10px)';
-});
+const inspect = () => {
+    [...document.querySelectorAll('img:not([alt])')].forEach((img) => {
+        img.style.filter = 'blur(10px)';
+    });
+};
+window.addEventListener('load', inspect);
